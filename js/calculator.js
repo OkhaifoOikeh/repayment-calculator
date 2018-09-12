@@ -222,11 +222,13 @@ $(document).ready(function(){
 				  grand = tmp
 				 
 				 //quick check
-				  if(!isFloat(begin_loan_amount) || !isFloat(installment_amount) || !isFloat(interest_amount) || !isFloat(principal_interval_amount)){
+				  if(round(interest_amount,2) > round(installment_amount,2) ||  round(principal_interval_amount,2) < 0.00 || !isFloat(begin_loan_amount) || !isFloat(installment_amount) || !isFloat(interest_amount) || !isFloat(principal_interval_amount)){
 					  alert("An unexpected error occured, Please check inputs.");
 					$("#result").html("");
 					return;
 				  }
+				  
+				 
 				 
 				 
 				  //populate the payment list
