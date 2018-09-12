@@ -1,0 +1,59 @@
+<html>
+<head>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+ <link  rel="stylesheet" href="css/custom.css"/>
+</head>
+<body class="container">
+	<h1>Interest Rate Calculator</h1>
+<form class="repaymentcalculator">
+   <div class="form-group" id="loanamount_container">
+    <label for="loanamount">Loan Amount</label>
+    <input type="text" class="form-control" id="loanamount" placeholder="loan amount">
+	<label class="message"> * Required Field. Loan Amount must be greater than 0.0 and less than positive Infinity</label>
+  </div>
+   <div class="form-group" id="installmentamount_container">
+    <label for="installmentamount">installment Amount</label>
+    <input type="text" class="form-control" id="installmentamount" placeholder="installment amount">
+	<label class="message"> * Required Field. Installment amount must be less than loan amount. Installment amount must be be greater than 0.0</label>
+  </div>
+   <div class="form-group" id="interest_rate_container">
+    <label for="interestrate">Interest Rate</label>
+    <input type="text" class="form-control" id="interestrate" placeholder="interest rate">
+	<label class="message"> * Required Field. Interest rate must be valid decimal</label>
+  </div>
+  <div class="form-group" id="installment_interval_container">
+      <label for="installmentinterval">Installment Interval</label>
+      <select class="form-control" id="installmentinterval">
+        <option>Daily</option>
+        <option>Weekly</option>
+        <option>Monthly</option>
+      </select>
+	  <label class="message"> Intallment Interval can only be Daily, Weekly or Monthly</label>
+    </div>
+   <div class="form-group" id="start_date_container"> <!-- Date input -->
+      <label class="control-label" for="startdate">Date</label>
+      <input class="startdate" id="startdate" name="startdate" placeholder="MM/DD/YYY" type="text"/>
+	  <label class="message"> * Required Field. Date is invalid.</label>
+        </div>
+   
+  <center><button class="btn btn-primary" id="calculate">Calculate</button></center>
+</form>
+<div id="result"></div>
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Custom library -->
+<script src="js/calculator.js"></script>
+
+</body>
+</html>

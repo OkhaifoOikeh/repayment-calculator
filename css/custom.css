@@ -1,0 +1,15 @@
+table, th, td {
+    margin: auto;
+      left: 50%;
+   border: 1px solid black;
+   padding: 10px;
+    text-align: center;
+}
+
+.container{
+	margin:10px;
+}
+
+.message{
+	color:red;
+}
